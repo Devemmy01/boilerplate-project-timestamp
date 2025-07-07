@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timestamp Microservice</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+      code {
+        background: #f4f4f4;
+        padding: 2px 4px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timestamp Microservice</h1>
+    <p>
+      This API returns Unix and UTC timestamps for a given date string or Unix
+      timestamp.
+    </p>
+    <h2>Usage</h2>
+    <ul>
+      <li><code>/api/</code> - Returns the current timestamp</li>
+      <li>
+        <code>/api/2015-12-25</code> - Returns the timestamp for a specific date
+      </li>
+      <li>
+        <code>/api/1451001600000</code> - Returns the timestamp for a Unix time
+        in milliseconds
+      </li>
+    </ul>
+    <h2>Example Output</h2>
+    <pre>
+{
+  "unix": 1451001600000,
+  "utc": "Fri, 25 Dec 2015 00:00:00 GMT"
+}</pre
+    >
+    <h2>Invalid Date Example</h2>
+    <pre>{ "error": "Invalid Date" }</pre>
+  </body>
+</html>
